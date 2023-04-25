@@ -1,3 +1,4 @@
+#include <stddef.h>
 #include <stdio.h>
 #include "sort.h"
 
@@ -9,6 +10,9 @@
 void print_list(const listint_t *list)
 {
 	int i;
+
+	if (list == NULL)
+		return;
 
 	i = 0;
 	while (list)
