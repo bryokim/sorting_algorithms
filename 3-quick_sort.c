@@ -38,7 +38,7 @@ void quick_sort_helper(int *array, int lo, int hi, size_t size)
 		if (array[j] < pivot)
 		{
 			i++;
-			if (i != j)
+			if (array[i] != array[j])
 			{
 				swap(array, i, j);
 				print_array(array, size);
@@ -46,7 +46,7 @@ void quick_sort_helper(int *array, int lo, int hi, size_t size)
 		}
 	}
 	i++;
-	if (i != hi)
+	if (array[i] != array[hi])
 	{
 		swap(array, i, hi);
 		print_array(array, size);
